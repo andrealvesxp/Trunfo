@@ -1,7 +1,7 @@
 #include <stdio.h>
  
 int main() {
-    // Variaveis Carta 1
+    //variaveis carta1
     char estado1[3];
     char codigo1[4];
     char nomeCidade1[50];
@@ -12,7 +12,7 @@ int main() {
     float densidade1;
     float pibPerCapita1;
  
-    // Variaveis Carta 2
+    //variaveis carta2
     char estado2[3];
     char codigo2[4];
     char nomeCidade2[50];
@@ -23,8 +23,8 @@ int main() {
     float densidade2;
     float pibPerCapita2;
  
-    // Cadastro para carta 1
-    printf("Carta 1");
+    //cadastro carta1
+    printf("Carta 1\n");
     printf("Digite o estado : ");
     scanf("%s", estado1);
  
@@ -46,8 +46,10 @@ int main() {
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontosTuristicos1);
  
-    // Cadastro para carta 2
-    printf("Carta 2");
+    printf("\n");
+
+    //cadastro carta2
+    printf("Carta 2\n");
     printf("Digite o estado : ");
     scanf("%s", estado2);
  
@@ -69,32 +71,42 @@ int main() {
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontosTuristicos2);
  
-    densidade1 = populacao1 / area1;
-    pibPerCapita1 = pib1 / populacao1;
+    printf("\n");
+
+    //calculo para verificar densidade e pibpercapita
+    densidade1 = populacao1/area1;
+    pibPerCapita1 = pib1/populacao1;
  
-    densidade2 = populacao2 / area2;
-    pibPerCapita2 = pib2 / populacao2;
+    densidade2 = populacao2/area2;
+    pibPerCapita2 = pib2/populacao2;
  
-    // Calculo de Dados para mostrar o vencedor
-    printf("Calculando Dados");
-    printf("Carta 1 - %s (%s)", nomeCidade1, estado1);
-    printf("Densidade: %f", densidade1);
-    printf("PIB per capita: %f", pibPerCapita1);
- 
-    printf("Carta 2 - %s (%s)", nomeCidade2, estado2);
-    printf("Densidade: %f", densidade2);
-    printf("PIB per capita: %f", pibPerCapita2);
- 
+    //calculo de dados para mostrar o vencedor
+    printf("Calculando Dados\n");
+    printf("\n");
+    printf("Carta 1 - %s: %s\n", nomeCidade1, estado1);
+    printf("Densidade: %f\n", densidade1);
+    printf("PIB per capita: %f\n", pibPerCapita1);
+    printf("\n");
+    printf("Carta 2 - %s: %s\n", nomeCidade2, estado2);
+    printf("Densidade: %f\n", densidade2);
+    printf("PIB per capita: %f\n", pibPerCapita2);
+
+    printf("\n");
+
     printf("Comparando cartas (Vencedor por Populacao)");
+
+    printf("\n");
+
+    printf("Carta 1 - %s- %s : %d\n", nomeCidade1, estado1, populacao1);
+    printf("Carta 2 - %s- %s : %d\n", nomeCidade2, estado2, populacao2);
  
-    printf("Carta 1 - %s (%s): %d", nomeCidade1, estado1, populacao1);
-    printf("Carta 2 - %s (%s): %d", nomeCidade2, estado2, populacao2);
- 
+    printf("\n");
+
     if (populacao1 > populacao2) {
-        printf("Resultado: Carta 1 (%s) venceu!", nomeCidade1);
+        printf("Resultado: Carta 1 (%s) venceu!\n", nomeCidade1);
     } 
       else if (populacao2 > populacao1) {
-        printf("Resultado: Carta 2 (%s) venceu!", nomeCidade2);
+        printf("Resultado: Carta 2 (%s) venceu!\n", nomeCidade2);
     } 
       else {
         printf("Resultado: Empate!");
