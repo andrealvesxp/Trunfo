@@ -2,7 +2,7 @@
  
 int main() {
     //variaveis carta1
-    char estado1[3];
+    char estado1;
     char codigo1[4];
     char nomeCidade1[50];
     int populacao1;
@@ -13,7 +13,7 @@ int main() {
     float pibPerCapita1;
  
     //variaveis carta2
-    char estado2[3];
+    char estado2;
     char codigo2[4];
     char nomeCidade2[50];
     int populacao2;
@@ -26,13 +26,13 @@ int main() {
     //cadastro carta1
     printf("Carta 1\n");
     printf("Digite o estado : ");
-    scanf("%s", estado1);
+    scanf(" %c", &estado1);
  
     printf("Digite o codigo da carta : ");
     scanf("%s", codigo1);
  
     printf("Digite o nome da cidade : ");
-    scanf("%s", nomeCidade1);
+    scanf(" %s", nomeCidade1);
  
     printf("Digite a populacao: ");
     scanf("%d", &populacao1);
@@ -51,13 +51,13 @@ int main() {
     //cadastro carta2
     printf("Carta 2\n");
     printf("Digite o estado : ");
-    scanf("%s", estado2);
+    scanf(" %c", &estado2);
  
     printf("Digite o codigo da carta : ");
     scanf("%s", codigo2);
  
     printf("Digite o nome da cidade : ");
-    scanf("%s", nomeCidade2);
+    scanf(" %s", nomeCidade2);
  
     printf("Digite a populacao: ");
     scanf("%d", &populacao2);
@@ -83,11 +83,11 @@ int main() {
     //calculo de dados para mostrar o vencedor
     printf("Calculando Dados\n");
     printf("\n");
-    printf("Carta 1 - %s: %s\n", nomeCidade1, estado1);
+    printf("Carta 1 - %s: %c\n", nomeCidade1, estado1);
     printf("Densidade: %f\n", densidade1);
     printf("PIB per capita: %f\n", pibPerCapita1);
     printf("\n");
-    printf("Carta 2 - %s: %s\n", nomeCidade2, estado2);
+    printf("Carta 2 - %s: %c\n", nomeCidade2, estado2);
     printf("Densidade: %f\n", densidade2);
     printf("PIB per capita: %f\n", pibPerCapita2);
 
@@ -97,8 +97,8 @@ int main() {
 
     printf("\n");
 
-    printf("Carta 1 - %s- %s : %d\n", nomeCidade1, estado1, populacao1);
-    printf("Carta 2 - %s- %s : %d\n", nomeCidade2, estado2, populacao2);
+    printf("Carta 1 - %s- %c : %d\n", nomeCidade1, estado1, populacao1);
+    printf("Carta 2 - %s- %c : %d\n", nomeCidade2, estado2, populacao2);
  
     printf("\n");
 
